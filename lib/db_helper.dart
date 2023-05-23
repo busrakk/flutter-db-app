@@ -53,7 +53,7 @@ class SQLHelper {
   }
 
   // data silme
-  static Future<void> deleteData(int id) async {
+  static Future<void> deleteBook(int id) async {
     final db = await SQLHelper.db();
     try {
       await db.delete('books', where: 'id = ?', whereArgs: [id]);
